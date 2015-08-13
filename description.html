@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/04f9c26e-88fd-4dfd-b715-9733d17420b6Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Apps for Office: Loading and Writing Office Open XML</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Apps for Office: Loading and Writing Office Open XML</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Office 365, Word, apps for Office
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Open XML
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/28/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Apps-for-Office-Loading-7a453236">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div id="header">
+<table id="bottomTable" cellspacing="0" cellpadding="0">
+<tbody>
+<tr id="headerTableRow1">
+<td align="left"><span id="runningHeaderText">&nbsp;</span></td>
+</tr>
+<tr id="headerTableRow2">
+<td align="left"><span id="nsrTitle">Apps for Office: Loading and writing Office Open XML</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="mainSection">
+<div id="mainBody">
+<div>
+<p><span>Summary:</span> This sample app shows you how to add a variety of rich content types to a Word document using the
+<strong>setSelectedDataAsync</strong> method with <strong>ooxml</strong> coercion type. The app also gives you the ability to show the Office Open XML markup for each sample content type right on the page.</p>
+</div>
+<div>
+<h1>Description of the sample</h1>
+<div id="sectionSection0">
+<p>The app initializes in a blank Word document. You choose an option to insert the content or its markup at the selection point in the active Word document and then click the object type you want from the following options:</p>
+<ul>
+<li>
+<p>formatted text</p>
+</li><li>
+<p>styled text</p>
+</li><li>
+<p>a simple image</p>
+</li><li>
+<p>a formatted image</p>
+</li><li>
+<p>a text box</p>
+</li><li>
+<p>an Office drawing shape</p>
+</li><li>
+<p>a content control</p>
+</li><li>
+<p>a formatted table</p>
+</li><li>
+<p>a styled table</p>
+</li><li>
+<p>a SmartArt diagram</p>
+</li><li>
+<p>a chart</p>
+</li></ul>
+<p>Figure 1 shows how the task pane for the sample app appears when the solution starts.</p>
+<strong>
+<div class="caption">Figure 1. The Loading and Writing OOXML task pane</div>
+<img src="description/image.png" alt=""></strong><br>
+&nbsp;
+<div>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<th align="left"><strong>Note</strong> </th>
+</tr>
+<tr>
+<td>
+<p>When you choose the option to see the markup for a selected type of content, what you're seeing is the Office Open XML edited to remove unnecessary markup, along with a few tips for additional guidance. You can also review any piece of markup used in the
+ app (with formatting to make it easier to navigate) directly in the Visual Studio solution. For further help interpreting, editing, and simplifying your work with Office Open XML for apps for Word, see
+<a href="http://msdn.microsoft.com/EN-US/library/office/apps/dn423225.aspx" >
+Creating Better Apps for Word with Office Open XML</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Figures 2a - 2b show how the document surface and task pane appear after extracting Office Open XML from the selection.</p>
+<strong>
+<div class="caption">Figure 2a. Document surface appearance after using the 'Get&hellip;' button to extract Office Open XML for selected content</div>
+</strong><br>
+&nbsp;<img src="description/70dee213-4853-47b2-abcf-55a982abb2c4image.png" alt="">
+<p><strong>&nbsp;</strong></p>
+<strong>
+<div class="caption">Figure 2b. Task pane appearance after using the 'Get&hellip;' button to extract Office Open XML for selected content</div>
+</strong><br>
+&nbsp;<img src="description/9a7aa2da-4f99-4519-8cd1-f341060ff9beimage.png" alt=""></div>
+<h1>Prerequisites</h1>
+<div id="sectionSection1">
+<p>This sample requires:</p>
+<ul>
+<li>
+<p>Visual Studio 2012</p>
+</li><li>
+<p>Office 2013 tools for Visual Studio 2012</p>
+</li><li>
+<p>Word 2013</p>
+</li></ul>
+</div>
+<h1>Key components of the sample</h1>
+<div id="sectionSection2">
+<p>The sample app contains:</p>
+<ul>
+<li>
+<p>The LoadingAndWritingOOXML project, which contains:</p>
+<ul>
+<li>
+<p>The LoadingAndWritingOOXML.xml manifest file</p>
+</li><li>
+<p>The LoadingAndWritingOOXML Web project, which contains multiple template files</p>
+</li></ul>
+</li><li>
+<p>However, the files that have been developed as part of this sample solution include:</p>
+<ul>
+<li>
+<p>LoadingAndWritingOOXML.html (in the App folder, LoadingAndWritingOOXML subfolder). This contains the HTML user interface that is displayed in the task pane. It consists of two HTML radio buttons for choosing the option to insert a selected content type or
+ display its markup in Word, several buttons for selecting a content type, and instructional text</p>
+</li><li>
+<p>LoadingAndWritingOOXML.js (in the same folder as above). This script file contains code that runs when the app is loaded. This startup wires up the Click event handlers for the eleven buttons in LoadingAndWritingOOXML.html that represent different content
+ types. The handler in the JavaScript connects each button to the correct function based on the actively-selected radio button, to either write the content or its markup into the document.</p>
+</li><li>
+<p>Several XML files containing the markup for each of the content types you can insert via the app. These are located in the folder named OOXMLSamples. (Note that some content types have a separate XML file for the markup when inserting the object vs. displaying
+ the markup on the page because chunks of binary data where applicable (i.e., for pictures and charts) are removed from the markup displayed on the page for ease of review. To learn more about the binary data contained in some types of Office Open XML markup,
+ see the previously-referenced article <a href="http://msdn.microsoft.com/EN-US/library/office/apps/dn423225.aspx" >
+Creating Better Apps for Word with Office Open XML</a></p>
+</li></ul>
+</li></ul>
+<p>All other files are automatically provided by the Visual Studio project template for apps for Office, and they have not been modified in the development of this sample app.</p>
+</div>
+<h1>Configure the sample</h1>
+<div id="sectionSection3">
+<p>To configure the sample, open the LoadingAndWritingOOXML.sln file with Visual Studio 2012. No other configuration is necessary.</p>
+</div>
+<h1>Build the sample</h1>
+<div id="sectionSection4">
+<p>To build the sample, choose the Ctrl&#43;Shift&#43;B keys.</p>
+</div>
+<h1>Run and test the sample</h1>
+<div id="sectionSection5">
+<p>To run the sample, choose the F5 key.</p>
+</div>
+<h1>Troubleshooting</h1>
+<div id="sectionSection6">
+<p>If the app fails to respond as described, try reloading it. (In the task pane, choose the down arrow, and then choose Reload.)</p>
+</div>
+<h1>Change log</h1>
+<div id="sectionSection7">
+<p>First release: Aug 2013.</p>
+</div>
+<h1>Related content</h1>
+<div id="sectionSection8">
+<ul>
+<li>
+<p><a href="http://msdn.microsoft.com/en-us/library/office/jj220060.aspx" >Build apps for Office</a></p>
+</li><li>
+<p><a href="http://www.ecma-international.org/publications/standards/Ecma-376.htm" >Standard ECMA-376: Office Open XML File Formats</a></p>
+</li><li>
+<p><a href="http://msdn.microsoft.com/EN-US/library/office/apps/dn423225.aspx" >Creating Better Apps for Word with Office Open XML</a></p>
+</li></ul>
+</div>
+</div>
+</div>
+&nbsp;</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>
