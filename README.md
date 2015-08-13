@@ -78,7 +78,7 @@ If the app fails to respond as described, try reloading it. (In the task pane, c
 
 **Related content**
 
-* [Build apps for Office](http://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
+* [Build Add-ins for Office](http://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
 * [Standard ECMA-376: Office Open XML File Formats](http://www.ecma-international.org/publications/standards/Ecma-376.htm)
 * [Creating Better Apps for Word with Office Open XML](http://msdn.microsoft.com/EN-US/library/office/apps/dn423225.aspx)
 
