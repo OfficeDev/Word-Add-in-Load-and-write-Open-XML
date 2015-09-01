@@ -64,8 +64,6 @@
     <Content Include="App\LoadingAndWritingOOXML\LoadingAndWritingOOXML.css" />
     <Content Include="App\LoadingAndWritingOOXML\LoadingAndWritingOOXML.html" />
     <Content Include="App\LoadingAndWritingOOXML\LoadingAndWritingOOXML.js" />
-    <Content Include="Content\fabric.components.min.css" />
-    <Content Include="Content\fabric.min.css" />
     <Content Include="Fonts\office365icons.svg" />
     <Content Include="Images\Close.png" />
     <Content Include="packages.config" />
@@ -285,6 +283,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
