@@ -66,6 +66,9 @@
     <Content Include="App\LoadingAndWritingOOXML\LoadingAndWritingOOXML.js" />
     <Content Include="Fonts\office365icons.svg" />
     <Content Include="Images\Close.png" />
+    <Content Include="Images\taskpane_16x.png" />
+    <Content Include="Images\taskpane_32x.png" />
+    <Content Include="Images\taskpane_80x.png" />
     <Content Include="packages.config" />
     <Content Include="Fonts\office365icons.eot" />
     <Content Include="Fonts\office365icons.ttf" />
