@@ -83,3 +83,6 @@ If the app fails to respond as described, try reloading it. (In the task pane, c
 * [Creating Better Apps for Word with Office Open XML](http://msdn.microsoft.com/EN-US/library/office/apps/dn423225.aspx)
 
  
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
