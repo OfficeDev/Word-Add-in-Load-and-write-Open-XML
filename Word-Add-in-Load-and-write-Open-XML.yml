@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: 'Word add-in: Add rich content and write Open XML'
+  path: ''
+  description: This sample add-in shows you how to add a variety of rich content types to a Word document using the setSelectedDataAsync method with ooxml coercion type. The app also gives you the ability to show the Office Open XML markup for each sample content type right on the page.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-ins
+  azureDeploy: ''
+  author: JohnAustin-MSFT
+  platforms: []
+  languages:
+  - JavaScript
+  extensions:
+    products:
+    - Word
+    scenarios: []
