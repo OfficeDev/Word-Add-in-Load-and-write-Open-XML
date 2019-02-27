@@ -1,3 +1,16 @@
+---
+topic: sample
+products:
+- Word
+- Office 365
+languages:
+- JavaScript
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 8/13/2015 11:04:00 AM
+---
 # Word-Add-in-Load-and-write-Open-XML
 This sample add-in shows you how to add a variety of rich content types to a Word document using the setSelectedDataAsync method with ooxml coercion type. The app also gives you the ability to show the Office Open XML markup for each sample content type right on the page.
 
