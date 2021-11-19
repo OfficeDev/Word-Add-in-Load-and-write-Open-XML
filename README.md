@@ -1,6 +1,8 @@
-# [ARCHIVED] Word-Add-in-Load-and-write-Open-XML
+# [MOVED] Word-Add-in-Load-and-write-Open-XML
 
-**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in. 
+**Note:** This sample was moved to the [PnP-OfficeAddins repo](https://github.com/OfficeDev/PnP-OfficeAddins) and is located at https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/word-add-in-load-and-write-open-xml
+
+This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in. 
 
 This sample add-in shows you how to add a variety of rich content types to a Word document using the setSelectedDataAsync method with ooxml coercion type. The app also gives you the ability to show the Office Open XML markup for each sample content type right on the page.
 
